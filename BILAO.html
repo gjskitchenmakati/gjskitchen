@@ -115,7 +115,7 @@
         margin-left: auto;
         margin-right: auto;
         width: 90%;
-        height: 350px;
+        height: 375px;
         margin-top: 175px;
         position: static;
       }
@@ -186,7 +186,7 @@
         margin-left: auto;
         margin-right: auto;
         width: 90%;
-        height: 350px;
+        height: 470px;
         margin-top: 25px;
         position: static;
       }
@@ -451,7 +451,7 @@
       }
       #descrip {
         width: 60%;
-        height: 350px;
+        height: 375px;
         background-color: white;
         border-radius: 10px;
         border: 3px solid #ffc913;
@@ -459,7 +459,7 @@
       }
       #descrip2 {
         width: 60%;
-        height: 350px;
+        height: 470px;
         background-color: white;
         border-radius: 10px;
         border: 3px solid #ffc913;
@@ -480,6 +480,25 @@
         border-radius: 10px;
         border: 3px solid #ffc913;
         float: left;
+      }
+      p {
+        text-indent: 15px;
+      }
+      h2 {
+        text-indent: 15px;
+        margin-bottom: -10px;
+      }
+      #label {
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        height: 75px;
+        font-family: 'Brush Script MT', cursive;
+        margin-top: 175px;
+        background-color: white;
+        border: 3px solid #ffc913;
+        border-radius: 40px;
+        text-align: center;
       }
       .footer {
         width: 100%;
@@ -531,8 +550,11 @@
           </div>
         </div>
       </div>
+      <div id="label">
+        <h1>Bilao Offers</h1>
+      </div>
       <div class="burger">
-        <img id="myImg" src="6.jpg" alt="Burger">
+        <img id="myImg" src="Palabok.jpg" alt="Palabok">
         <div id="myModal" class="modal">
           <span class="close">&times;</span>
           <img class="modal-content" id="img01">
@@ -551,30 +573,32 @@
         }
         </script>
         <div id="descrip">
-          <label class="container2">One
+          <h2>Palabok</h2>
+          <label class="container2">Small | 12" | 5-8 pax (Php400)
             <input type="checkbox" checked="checked">
             <span class="checkmark"></span>
           </label>
           <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
-          <label class="container2">Two
+          <label class="container2">Medium | 14" | 10-13 pax (Php600)
             <input type="checkbox">
             <span class="checkmark"></span>
           </label>
           <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
-          <label class="container2">Three
+          <label class="container2">Large | 16" | 15-20 pax (Php800)
             <input type="checkbox">
             <span class="checkmark"></span>
           </label>
           <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
-          <label class="container2">Four
+          <label class="container2">XL | 18" | 25-30 pax (Php1000)
             <input type="checkbox">
             <span class="checkmark"></span>
           </label>
           <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
+          <button style="float:right; margin-right:15px" type="button" name="Add-to-Cart" onclick="location.href=('popup.html')">Add to Cart</button>
         </div>
       </div>
       <div class="Hotdogsan">
-        <img id="myImg1" src="4.jpg" alt="Hotdogs">
+        <img id="myImg1" src="Stirfry.jpg" alt="Stir Fried Pancit">
         <div id="myModal1" class="modal1">
           <span class="close1">&times;</span>
           <img class="modal1-content" id="img02">
@@ -593,110 +617,40 @@
         }
         </script>
         <div id="descrip2">
-          <label class="container2">One
+          <h2>Stir Fried Pancit</h2>
+          <label class="container2">Small | 12" | 5-8 pax (Php400)
             <input type="checkbox" checked="checked">
             <span class="checkmark"></span>
           </label>
           <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
-          <label class="container2">Two
+          <label class="container2">Medium | 14" | 10-13 pax (Php600)
             <input type="checkbox">
             <span class="checkmark"></span>
           </label>
           <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
-          <label class="container2">Three
+          <label class="container2">Large | 16" | 15-20 pax (Php800)
             <input type="checkbox">
             <span class="checkmark"></span>
           </label>
           <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
-          <label class="container2">Four
+          <label class="container2">XL | 18" | 25-30 pax (1000)
             <input type="checkbox">
             <span class="checkmark"></span>
           </label>
           <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
-        </div>
-      </div>
-      <div class="Baconsan">
-        <img id="myImg2" src="8.jpg" alt="Hotdogs">
-        <div id="myModal2" class="modal2">
-          <span class="close2">&times;</span>
-          <img class="modal2-content" id="img03">
-        </div>
-        <script>
-        var modal = document.getElementById("myModal2");
-        var img = document.getElementById("myImg2");
-        var modalImg = document.getElementById("img03");
-        img.onclick = function(){
-          modal.style.display = "block";
-          modalImg.src = this.src;
-        }
-        var span = document.getElementsByClassName("close2")[0];
-        span.onclick = function() {
-          modal.style.display = "none";
-        }
-        </script>
-        <div id="descrip3">
-          <label class="container2">One
-            <input type="checkbox" checked="checked">
+          <label class="container2">
+            <input type="checkbox">Canton
             <span class="checkmark"></span>
           </label>
-          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
-          <label class="container2">Two
-            <input type="checkbox">
+          <label class="container2">
+            <input type="checkbox">Bihon
             <span class="checkmark"></span>
           </label>
-          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
-          <label class="container2">Three
-            <input type="checkbox">
+          <label class="container2">
+            <input type="checkbox">Mixed
             <span class="checkmark"></span>
           </label>
-          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
-          <label class="container2">Four
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
-          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
-        </div>
-      </div>
-      <div class="Fries">
-        <img id="myImg3" src="7.jpg" alt="Fries">
-        <div id="myModal3" class="modal3">
-          <span class="close3">&times;</span>
-          <img class="modal3-content" id="img04">
-        </div>
-        <script>
-        var modal = document.getElementById("myModal3");
-        var img = document.getElementById("myImg3");
-        var modalImg = document.getElementById("img04");
-        img.onclick = function(){
-          modal.style.display = "block";
-          modalImg.src = this.src;
-        }
-        var span = document.getElementsByClassName("close3")[0];
-        span.onclick = function() {
-          modal.style.display = "none";
-        }
-        </script>
-        <div id="descrip4">
-          <label class="container2">One
-            <input type="checkbox" checked="checked">
-            <span class="checkmark"></span>
-          </label>
-          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
-          <label class="container2">Two
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
-          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
-          <label class="container2">Three
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
-          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
-          <label class="container2">Four
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
-          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
+          <button style="float:right; margin-right:15px" type="button" name="Add-to-Cart" onclick="location.href=('popup.html')">Add to Cart</button>
         </div>
       </div>
       <br>
