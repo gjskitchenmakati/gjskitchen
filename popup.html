@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Popup</title>
+    <style media="screen">
+      body {
+        margin: 0;
+      }
+      .wrapper{
+        width:100%;
+        height: 600px;
+        background: url('BG.jpg') no-repeat center /cover;
+        text-align: center;
+        position: static;
+      }
+      .text {
+        width: 60%;
+        height: 275px;
+        background-color: white;
+        font-family: 'Brush Script MT', cursive;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 25px;
+        padding-top: 75px;
+        padding-bottom: -75px;
+      }
+      input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 15px
+      }
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="text">
+        <h1>Item added to cart!</h1>
+      </div>
+      <input type="submit" value="Back" onclick="location.href=('HOME.html')">
+    </div>
+  </body>
+</html>
