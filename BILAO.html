@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta  name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <title>Bilao Offers</title>
+    <style media="screen">
+      body {
+        margin: 0;
+      }
+      .wrapper{
+        width:100%;
+        min-width: 1000px;
+        max-height: 6000px;
+        text-align: justify;
+        background: url('BGdark.png') no-repeat center /cover;
+        overflow: auto;
+      }
+      .logodiv {
+        width: 12%;
+        float: left;
+        overflow: hidden;
+      }
+        .logo1 {
+          height: 150px;
+          transition: transform .2s;
+        }
+        .logo1:hover {
+          background-color: transparent;
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+      .linknav {
+        width: 80%;
+        height: 50px;
+        float: right;
+        background-color: #ffc913;
+        border-bottom-left-radius: 20px;
+        overflow: hidden;
+      }
+      .link {
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+      }
+      .linknav a {
+        float: left;
+        text-align: center;
+        font-family: "Copperplate", fantasy;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 20px;
+        display: block;
+      }
+      .linknav a:hover {
+        color: black;
+        display: block;
+        cursor: pointer;
+      }
+      .container {
+        float: right;
+      }
+      #cartbtn {
+        background-color: #ffc913;
+        border: none;
+      }
+      #cartbtn:hover {
+        cursor: pointer;
+      }
+      #cart {
+        height: 35px;
+        margin-top: 6px;
+      }
+      .dropdown {
+        overflow: hidden;
+        float: right;
+      }
+      .dropdown .dropbtn {
+        font-size: 20px;
+        border: none;
+        outline: none;
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        padding: 14px 16px;
+        background-color: inherit;
+        margin: 0;
+        font-family: "Copperplate", fantasy;
+      }
+      .navbar a:hover, .dropdown:hover .dropbtn {
+        background-color: #ddd;
+        color: black;
+        cursor: pointer;
+      }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+        z-index: 1;
+        right: 0;
+      }
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+      .dropdown-content a:hover {
+        background-color: #ddd;
+      }
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+      .burger {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        min-height: 400px;
+        margin-top: 60px;
+        position: static;
+      }
+      #myImg {
+        width: 30%;
+        height: 300px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        float: left;
+        border: 3px solid #ffc913;
+      }
+      #myImg:hover {opacity: 0.7;}
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.9);
+      }
+      .modal-content {
+        margin: auto;
+        display: block;
+        width: 100%;
+        max-width: 700px;
+      }
+      .modal-content {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+      @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)}
+        to {-webkit-transform:scale(1)}
+      }
+      @keyframes zoom {
+        from {transform:scale(0)}
+        to {transform:scale(1)}
+      }
+      .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .close:hover,
+      .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      @media only screen and (max-width: 700px){
+        .modal-content {
+          width: 100%;
+        }
+      }
+      .Hotdogsan {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        min-height: 490px;
+        margin-top: 25px;
+        position: static;
+      }
+      #myImg1 {
+        width: 30%;
+        height: 300px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        float: right;
+        border: 3px solid #ffc913;
+      }
+      #myImg1:hover {opacity: 0.7;}
+      .modal1 {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0,0.9);
+      }
+      .modal1-content {
+        margin: auto;
+        display: block;
+        width: 100%;
+        max-width: 700px;
+      }
+      .modal1-content {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+      }
+      @-webkit-keyframes zoom {
+        from {-webkit-transform:scale(0)}
+        to {-webkit-transform:scale(1)}
+      }
+      @keyframes zoom {
+        from {transform:scale(0)}
+        to {transform:scale(1)}
+      }
+      .close1 {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+      .close1:hover,
+      .close1:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      @media only screen and (max-width: 700px){
+        .modal1-content {
+          width: 100%;
+        }
+      }
+      .container2 {
+        display: block;
+        position: relative;
+        padding-left: 35px;
+        margin-bottom: 12px;
+        cursor: pointer;
+        font-size: 18px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin-top: 10px;
+        margin-left: 15px;
+      }
+      .container2 input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+      }
+      .container2:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+      .container2 input:checked ~ .checkmark {
+        background-color: #2196F3;
+      }
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+      .container2 input:checked ~ .checkmark:after {
+        display: block;
+      }
+      .container2 .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      #descrip {
+        width: 60%;
+        background-color: white;
+        border-radius: 10px;
+        border: 3px solid #ffc913;
+        float: right;
+      }
+      #descrip2 {
+        width: 60%;
+        background-color: white;
+        border-radius: 10px;
+        border: 3px solid #ffc913;
+        float: left;
+      }
+      p {
+        text-indent: 15px;
+      }
+      h2 {
+        text-indent: 15px;
+        margin-bottom: -10px;
+      }
+      #label {
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+        height: 75px;
+        font-family: 'Brush Script MT', cursive;
+        margin-top: 175px;
+        background-color: white;
+        border: 3px solid #ffc913;
+        border-radius: 40px;
+        text-align: center;
+      }
+      .footer {
+        width: 100%;
+        height: 140px;
+        background-color: #ffc913;
+      }
+      .para {
+        width: 43%;
+        height: auto;
+        float: left;
+        font-size: 17px;
+        text-align: justify;
+        padding-left: 18px;
+      }
+      .icon {
+        width: 55%;
+        float: right;
+      }
+      .iconn {
+        margin: 25px 25px 30px 30px;
+        height: 67px;
+        float: right;
+      }
+      input[type=submit] {
+        background-color: #04AA6D;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-top: 15px
+      }
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="navbar">
+        <div class="logodiv">
+          <img src="Logo.png" alt="Logo" onclick="location.href=('HOME.html')" class="logo1">
+        </div>
+        <div class="linknav">
+          <a href="HOME.html" class="link">HOME</a>
+          <a href="ABOUTUS.html" class="link">ABOUT US</a>
+          <a href="CONTACTUS.html" class="link">CONTACT US</a>
+          <a href="REVIEWS.html" class="link">REVIEWS</a>
+          <div class="container">
+            <button id="cartbtn" onclick="location.href=('CART.html')"><img src="buy.png" alt="Cart" id="cart"></button>
+            <div class="dropdown">
+              <button class="dropbtn">PRODUCTS &#9660;
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-content">
+                <a href="SNACKS.html">SNACKS</a>
+                <a href="BILAO.html">BILAO OFFERS</a>
+                <a href="BUNDLES.html">BUNDLES</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="label">
+        <h1>Bilao Offers</h1>
+      </div>
+      <div class="burger">
+        <img id="myImg" src="Palabok.jpg" alt="Palabok">
+        <div id="myModal" class="modal">
+          <span class="close">&times;</span>
+          <img class="modal-content" id="img01">
+        </div>
+        <script>
+        var modal = document.getElementById("myModal");
+        var img = document.getElementById("myImg");
+        var modalImg = document.getElementById("img01");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+        }
+        var span = document.getElementsByClassName("close")[0];
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        </script>
+        <div id="descrip">
+          <h2>Palabok</h2>
+          <label class="container2">Small | 12" | 5-8 pax (Php400)
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
+          <label class="container2">Medium | 14" | 10-13 pax (Php600)
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
+          <label class="container2">Large | 16" | 15-20 pax (Php800)
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
+          <label class="container2">XL | 18" | 25-30 pax (Php1000)
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
+        </div>
+      </div>
+      <div class="Hotdogsan">
+        <img id="myImg1" src="Stirfry.jpg" alt="Stir Fried Pancit">
+        <div id="myModal1" class="modal1">
+          <span class="close1">&times;</span>
+          <img class="modal1-content" id="img02">
+        </div>
+        <script>
+        var modal = document.getElementById("myModal1");
+        var img = document.getElementById("myImg1");
+        var modalImg = document.getElementById("img02");
+        img.onclick = function(){
+          modal.style.display = "block";
+          modalImg.src = this.src;
+        }
+        var span = document.getElementsByClassName("close1")[0];
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        </script>
+        <div id="descrip2">
+          <h2>Stir Fried Pancit</h2>
+          <label class="container2">Small | 12" | 5-8 pax (Php400)
+            <input type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+          </label>
+          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
+          <label class="container2">Medium | 14" | 10-13 pax (Php600)
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
+          <label class="container2">Large | 16" | 15-20 pax (Php800)
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
+          <label class="container2">XL | 18" | 25-30 pax (1000)
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p style="text-indent:15px">Quantity: <input type="number" id="quantity" name="quantity" min="0" max="50"></p>
+          <label class="container2">
+            <input type="checkbox">Canton
+            <span class="checkmark"></span>
+          </label>
+          <label class="container2">
+            <input type="checkbox">Bihon
+            <span class="checkmark"></span>
+          </label>
+          <label class="container2">
+            <input type="checkbox">Mixed
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+      <center><input type="submit" value="Add-to-Cart" onclick="location.href=('popup.html')"></center>
+      <br>
+      <div class="footer">
+        <div class="para">
+          <p><b>"With a goal to satisfy anyone's cravings, G & J's Kitchen aims to deliver on people's expectations of what good food made with love tastes like!"</b><br>
+          Est, 2020<br>
+          All images and information in this website are owned by G & J's Kitchen and were taken with their permission.</p>
+        </div>
+        <div class="icon">
+          <a href="https://www.facebook.com/gjskitchenmakati"><img src="fb.png" class="iconn" alt="fb"></a>
+          <a href="https://www.instagram.com/gjskitchenmakati/"><img src="instagram.png" class="iconn" alt="instagram"></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
